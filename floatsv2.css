@@ -1,0 +1,87 @@
+body {
+    background-color: lightblue;
+}
+header, footer, .container {
+    border: 1px solid black;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    overflow: auto;
+}
+header, footer {
+    height: 50px;
+}
+img {
+    width: inherit;
+    height: 400;
+}
+nav, main, aside {
+    border: 1px solid black;
+}
+h1 {
+    font-size: 20px;
+ }
+a {
+    display: block;
+    background-color: grey;
+    padding: 7px 0 7px 0;
+    margin: 5px 0 5px 0;
+    width: inherit;
+}
+p {
+    padding: 0 20px 0 20px;
+}
+@media screen and (min-width: 480px) {
+.container nav, .container aside {
+    width: 200px;
+    height: calc(100vh - 100px - 1rem);
+}
+.container main {
+    width: calc(100vw - 400px - 1.5rem);
+    height: calc(100vh - 100px - 1rem);
+    float: left;
+}
+.container nav {
+    float: left;
+    clear: left;
+}
+.container aside {
+    float: left;
+    clear: right;
+}
+}
+
+@media screen and (max-width: 480px) {
+body{
+    background-color: lightpink;
+}  
+.container nav {
+    width: 100%;
+    height: 50px;
+    float: none;
+    clear: both;
+}
+.container aside {
+    width: 100%;
+    height: 200px;
+    float: none;
+    clear: both;
+}
+.container main {
+    width: 100%;
+    height: calc(100% - 300px);
+    float: none;
+    clear: both;
+}
+img {
+    width: auto;
+    height: inherit;
+}
+a {
+    display: inline-block;
+    background-color: grey;
+    padding: 7px 0 7px 0;
+    margin: 5px 0 5px 0;
+    height: inherit;
+}
+}
